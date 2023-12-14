@@ -1,0 +1,45 @@
+.brand {
+    padding-left: 3rem;
+color: #5A67BA;
+font-family: Poppins;
+font-size: 2rem;
+font-style: normal;
+font-weight: 700;
+line-height: 0.6875rem; /* 34.375% */
+letter-spacing: 0.03125rem;
+}
+  
+.search {
+    width: 60%;
+    padding-left: 10%;
+    margin-right: 10%;
+}
+
+
+.search button:hover{
+    background-color: #E2E5F2;
+    border-color: white;
+}
+.search button,
+.search button:focus {
+    background-color: white;
+    border-color: #E2E5F2;
+}
+
+.search button svg {
+    fill: #8d8d91;
+}
+
+.search button:hover svg {
+    fill: white;
+    transition: fill 0.3s ease;
+}
+
+.navbar {
+    padding: 3%;
+}
+
+.navlink2 {
+    margin-left: 10rem;
+    margin-right: 3rem;
+}

@@ -1,0 +1,29 @@
+.sidebar{
+    background: #F1F2F7;
+}
+
+.menu{
+    color: #082431;
+
+font-family: Poppins;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 600;
+line-height: 0.6875rem; 
+letter-spacing: 0.0625rem;
+}
+
+.sidelink {
+    color: #273240;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: 0.03125rem;
+  }
+  
+  .sidelink:hover {
+    background-color: rgba(80, 110, 161, 0.57);
+    color: #fff;
+  }
