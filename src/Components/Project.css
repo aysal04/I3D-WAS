@@ -1,0 +1,10 @@
+.projectCard{
+    height: 10rem;
+    margin: 5rem;
+    min-width: 60rem;
+    margin-left: 10rem;
+    align-items: center;
+    border-radius: 0.9375rem;
+    background: #D8DFE4;
+    padding: 2.5rem; 
+}

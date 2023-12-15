@@ -1,0 +1,25 @@
+.modelCard{
+    padding-top: 2rem;
+    padding-left: 22rem;
+}
+
+.model-main{
+    height: 50vh;
+    min-width: 80rem;
+    align-items: center;
+    border-radius: 0.9375rem;
+    background: #D8DFE4;
+    margin-top: 2rem; 
+}
+
+.model-status{
+    padding-left: 20rem;
+    padding-right: 20rem;
+}
+
+.svgbutton{
+    width: 16.313rem;
+    height: 0.3125rem;
+    background: #DFD9D9;
+    margin-top:0.5rem;
+}

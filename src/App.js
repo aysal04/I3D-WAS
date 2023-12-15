@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from './Pages/Dashboard.jsx';
 import Projects from './Pages/Projects.jsx';
-import Model from './Pages/Model.jsx';
+import Models from './Pages/Models.jsx';
 import Register from './Pages/Register.jsx';
 import Login from './Pages/Login.jsx';
 import './App.css';
@@ -14,10 +14,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/projects" element={<Projects />}/>
-          <Route path="/project/:id" element={<Model />}/>
-          <Route path="/login" element={<Login />}/>
-          <Route path="/register" element={<Register />}/>
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/project/:id" element={<Models />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </BrowserRouter>
     </div>
