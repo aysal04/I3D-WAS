@@ -3,9 +3,14 @@
     padding-left: 22rem;
 }
 
-.model-main{
-    height: 50vh;
-    min-width: 80rem;
+.window{
+    /* height: 10vh; */
+    margin-left: 20vw;
+}
+
+#model-main{
+    height: 50%;
+    width: 50%;
     align-items: center;
     border-radius: 0.9375rem;
     background: #D8DFE4;
