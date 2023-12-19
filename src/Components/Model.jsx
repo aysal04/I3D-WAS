@@ -3,10 +3,11 @@ import './Model.css';
 import * as THREE from 'three';
 import Face from './Object.jsx';
 import { Canvas, useLoader } from "@react-three/fiber";
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import { Html, useProgress } from '@react-three/drei'
 import { useGLTF, Stage, PresentationControls } from "@react-three/drei"
+import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
+
 // function Conc(){
 //     const obj = useLoader(OBJLoader, process.env.PUBLIC_URL+"meshed-poisson.obj");
     
@@ -23,7 +24,7 @@ import { useGLTF, Stage, PresentationControls } from "@react-three/drei"
 //     )
 // }
 function Item(props) {
-    const { scene } = useGLTF("/temple.glb");
+    const scene = useLoader(OBJLoader, "/ppxx.obj");
     return <primitive object={scene} {...props}/>
   }
 
@@ -53,12 +54,14 @@ const Model = ({ projectId }) => {
                 'width':'100%'
             }}
             >
-            <color attach="background" args={["#101010"]} />
-            <directionalLight intensity={0.5} position={[5, 5, 5]} />
-            <OrbitControls enableZoom={true} enableRotate={true} />
-                <Stage environment={null}>
-                    <Item scale={0.01} />
-                </Stage>
+                <Suspense fallback={<Loader />}>
+                <color attach="background" args={["#101010"]} />
+                <directionalLight intensity={0.01} position={[5, 5, 5]} />
+                <OrbitControls enableZoom={true} enableRotate={true} />
+                    <Stage environment={null}>
+                        <Item scale={0.01} />
+                    </Stage>
+                </Suspense>
             </Canvas>
             </div>
             <div className="model-status mb-2 d-flex w-[31px] h-[31px] bg-zinc-300 rounded-full justify-content-between align-items-center">
