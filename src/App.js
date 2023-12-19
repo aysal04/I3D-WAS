@@ -5,6 +5,7 @@ import Projects from './Pages/Projects.jsx';
 import Models from './Pages/Models.jsx';
 import Register from './Pages/Register.jsx';
 import Login from './Pages/Login.jsx';
+import Table from './Components/Mesh.jsx'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -13,6 +14,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
+          <Route path="/model" element={<Table />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/project/:id" element={<Models />} />
