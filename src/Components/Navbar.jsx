@@ -11,7 +11,15 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-function NavBar() {
+function NavBar({onSearchChange}) {
+  const [searchValue, setSearchValue] = useState('');
+
+  const handleSearchChange = (event) => {
+    const value = event.target.value;
+    setSearchValue(value);
+    // Call the callback function to notify the parent component
+    onSearchChange(value);
+  };
   const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
 
   const handleOffcanvasToggle = () => {
@@ -44,6 +52,8 @@ function NavBar() {
                     placeholder="Search"
                     className="me-2 bar"
                     aria-label="Search"
+                    value={searchValue}
+                    onChange={handleSearchChange}
                   />
                   <Button variant="outline-success"><SearchOutlinedIcon /></Button>
                 </Form>

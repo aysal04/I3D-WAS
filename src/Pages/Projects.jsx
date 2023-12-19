@@ -1,13 +1,12 @@
 import React from 'react';
-import { useState } from 'react';
+import {useState} from 'react';
 import NavBar from '../Components/Navbar.jsx';
 import Sidebar from '../Components/Sidebar.jsx';
 import Project from '../Components/Project.jsx';
 import pData from '../assets/data/projectData.js';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { MDBBtn } from 'mdb-react-ui-kit';
-// import {writeJsonFile} from 'write-json-file';
+// import { MDBBtn } from 'mdb-react-ui-kit';
 
 const Projects = () => {
     const addProject= {
@@ -44,10 +43,13 @@ const Projects = () => {
         addLis([...Lis]);
         localStorage.setItem('pData', JSON.stringify(Lis));
       };
-
+      const [searchValue, setSearchValue] = useState('');
+      const handleSearchChange = (value) => {
+          setSearchValue(value);
+        };
     return (
         <div>
-            <NavBar />
+            <NavBar onSearchChange={handleSearchChange} />
             <div className='d-flex'>
                 <Sidebar />
                 <div style={{ paddingLeft: '250px' }}>
@@ -87,10 +89,12 @@ const Projects = () => {
                         </Modal.Body>
                     </Modal>
                     </div>
-                    {pData.map((p) => (
-                        <Project key={p.id} pId={p.id} pLocation={p.location} pStatus={p.status} />
-                    ))}
-                </div>
+    {pData
+      .filter((p) => p.location.toLowerCase().includes(searchValue.toLowerCase()))
+      .map((p) => (
+        <Project key={p.id} pId={p.id} pLocation={p.location} pStatus={p.status} />
+      ))}
+  </div>
             </div>
         </div>
     );
