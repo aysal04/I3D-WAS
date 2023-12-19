@@ -1,4 +1,4 @@
-const pData = [
+const pData = JSON.parse(localStorage.getItem('pData')) || [
     {
         id: '1',
         location: 'Bangalore',

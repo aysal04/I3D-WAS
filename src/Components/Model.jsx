@@ -23,7 +23,7 @@ import { useGLTF, Stage, PresentationControls } from "@react-three/drei"
 //     )
 // }
 function Item(props) {
-    const { scene } = useGLTF("/meshed-poisson.glb");
+    const { scene } = useGLTF("/temple.glb");
     return <primitive object={scene} {...props}/>
   }
 

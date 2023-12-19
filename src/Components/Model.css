@@ -9,8 +9,8 @@
 }
 
 #model-main{
-    height: 50%;
-    width: 50%;
+    height: 50vh;
+    width: 50vw;
     align-items: center;
     border-radius: 0.9375rem;
     background: #D8DFE4;
