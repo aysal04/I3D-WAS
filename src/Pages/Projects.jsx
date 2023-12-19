@@ -42,6 +42,7 @@ const Projects = () => {
         });
         addLis([...Lis]);
         localStorage.setItem('pData', JSON.stringify(Lis));
+        
       };
       const [searchValue, setSearchValue] = useState('');
       const handleSearchChange = (value) => {
@@ -59,7 +60,7 @@ const Projects = () => {
                     </Button>
                     <Modal show={show} onHide={handleClose}>
                         <Modal.Header closeButton>
-                        <Modal.Title><h1>Enter Project Details</h1></Modal.Title>
+                        <Modal.Title><h2>Enter Project Details</h2></Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
                             <form>

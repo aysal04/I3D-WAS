@@ -30,7 +30,7 @@ function Item(props) {
 
 function Loader() {
     const { progress } = useProgress()
-    return <Html center>{progress} % loaded</Html>
+    return <Html center>{progress} Loading...</Html>
   }
 
 const Model = ({ projectId }) => {
@@ -64,7 +64,21 @@ const Model = ({ projectId }) => {
                 </Suspense>
             </Canvas>
             </div>
-            <div className="model-status mb-2 d-flex w-[31px] h-[31px] bg-zinc-300 rounded-full justify-content-between align-items-center">
+            <br />
+            <form>
+            <div class="form-group">
+                                <label for="exampleInputPassword1"><h4>Select Model</h4></label>
+                                <select class="form-control form-control-lg">
+                                    <option disabled selected>select model</option>
+                                    <option>First</option>
+                                    <option>Second</option>
+                                    <option>Third</option>
+                                    <option>Fourth</option>
+                                </select>
+                            </div>
+            </form>
+            <br />
+            {/* <div className="model-status mb-2 d-flex w-[31px] h-[31px] bg-zinc-300 rounded-full justify-content-between align-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
   <circle cx="15.5" cy="15.5" r="15.5" fill="#D9D9D9"/>
 </svg>
@@ -78,13 +92,13 @@ height: '0.3125rem', background: '#DFD9D9', marginTop:'0.5rem'}}></div>
 <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
 <circle cx="15.5" cy="15.5" r="15.5" fill="#D9D9D9"/>
 </svg>
-            </div>
-            <div className='d-flex justify-content-between align-items-center' style={{paddingLeft: '20rem',
+            </div> */}
+            {/* <div className='d-flex justify-content-between align-items-center' style={{paddingLeft: '20rem',
     paddingRight: '20rem'}}>
                 <p>start</p>
                 <p>intmediate</p>
                 <p>final</p>
-            </div>
+            </div> */}
         </div>
     );
 
