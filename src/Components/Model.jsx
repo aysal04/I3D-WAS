@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useLayoutEffect, useRef, Suspense } from 'react';
 import './Model.css';
 import * as THREE from 'three';
 import Face from './Object.jsx';
