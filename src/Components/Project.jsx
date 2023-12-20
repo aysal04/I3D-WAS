@@ -10,15 +10,22 @@ const Project = ({ pId, pLocation, pStatus }) => {
         navigate(`/project/${pId}`);
     };
 
+    const handleButtonClick = () => {
+        navigate(`/report`);
+    };
+
     return (
-        <div className='projectCard' onClick={handleCardClick}>
-            <div className='d-flex justify-content-between align-items-center mb-3'>
+        <div className='projectCard'>
+            <div onClick={handleCardClick} className='d-flex justify-content-between align-items-center mb-3'>
                 <h3>{pId}</h3>
                 <div>
                     <LocationOnIcon/> {pLocation}
                 </div>
             </div>
+            <div className='d-flex justify-content-between align-items-center mb-3'>
             <p>{pStatus}</p>
+            <button onClick={handleButtonClick}>Generate Report</button>
+            </div>
         </div>
     );
 }

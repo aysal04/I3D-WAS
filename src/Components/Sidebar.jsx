@@ -16,7 +16,7 @@ const Sidebar = () => {
     <div style={{ position: 'fixed', height: '91.7vh', overflow: 'scroll', zIndex: 1000 }}>
       <CDBSidebar textColor="#fff" backgroundColor="#F1F2F7">
         <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
-          <a href="/" className="text-decoration-none menu">
+          <a href="/home" className="text-decoration-none menu">
             Menu
           </a>
         </CDBSidebarHeader>
@@ -48,7 +48,7 @@ const Sidebar = () => {
             }}
           >
            <AccountCircleIcon/> 
-            Username
+             Revamp
           </div>
         </CDBSidebarFooter>
       </CDBSidebar>

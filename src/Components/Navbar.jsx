@@ -31,7 +31,7 @@ function NavBar({onSearchChange}) {
       {['md'].map((expand) => (
         <Navbar sticky="top" key={expand} expand={expand} className="bg-body-tertiary">
           <Container fluid className='navbar'>
-            <Navbar.Brand href="#" className="brand">I3D-WAS</Navbar.Brand>
+            <Navbar.Brand href="/home" className="brand">I3D-WAS</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} onClick={handleOffcanvasToggle} />
             <Navbar.Offcanvas
               show={isOffcanvasOpen}
@@ -58,7 +58,7 @@ function NavBar({onSearchChange}) {
                   <Button variant="outline-success"><SearchOutlinedIcon /></Button>
                 </Form>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#user" className='navlink1'><AccountCircleIcon /> Username</Nav.Link>
+                  <Nav.Link href="#user" className='navlink1'><AccountCircleIcon /> Revamp</Nav.Link>
                   <Nav.Link href="#notifications" className='navlink2'><NotificationsIcon /></Nav.Link>
                 </Nav>
               </Offcanvas.Body>

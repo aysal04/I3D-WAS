@@ -52,26 +52,29 @@ const Projects = () => {
             <NavBar onSearchChange={handleSearchChange} />
             <div className='d-flex'>
                 <Sidebar />
-                <div style={{ paddingLeft: '250px' }}>
+                <div style={{ paddingLeft: '300px' }}>
                     <div>
+                    <div className='d-flex justify-content-between align-items-center m-5' style={{paddingLeft:'3rem'}}>
+                    <h1>Projects</h1>
                     <Button variant="primary" style={addProject} onClick={handleShow}>
                         <h4 style={{'margin':'0'}}>Add Project</h4>
                     </Button>
-                    <Modal show={show} onHide={handleClose}>
+                    </div>
+                    <Modal style={{paddingTop:'25vh',right:'10rem'}} show={show} onHide={handleClose}>
                         <Modal.Header closeButton>
-                        <Modal.Title><h1>Enter Project Details</h1></Modal.Title>
+                        <Modal.Title><h5>Enter Project Details</h5></Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
                             <form>
-                            <div class="form-group ">
-                                <label for="exampleInput"><h4>Project Name/Id</h4></label>
-                                <input type="text" class="form-control form-control-lg" id="project id" placeholder="Enter Project Name/Id" onChange={(e) => setProjectName(e.target.value)} />
-                                <small class="form-text text-muted">Once submitted you cannot change the project name</small>
+                            <div className="form-group ">
+                                <label for="exampleInput"><h6>Project Name/Id</h6></label>
+                                <input required type="text" class="form-control form-control-md" id="project id" placeholder="Enter Project Name/Id" onChange={(e) => setProjectName(e.target.value)} />
+                                <small className="form-text text-muted mb-5">Once submitted you cannot change the project name</small>
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1"><h4>Select Region</h4></label>
-                                <select class="form-control form-control-lg" onChange={(e) => setSelectedRegion(e.target.value)}>
-                                    <option disabled selected>select region</option>
+                            <div className="form-group mt-4">
+                                <label for="exampleInputPassword1"><h6>Project Location</h6></label>
+                                <select required class="form-control form-control-md" placeholder='Select project Location' onChange={(e) => setSelectedRegion(e.target.value)}>
+                                    <option disabled selected>Select project Location</option>
                                     <option>TamilNadu</option>
                                     <option>Rajasthan</option>
                                     <option>Telangana</option>
@@ -80,8 +83,8 @@ const Projects = () => {
                                     <option>Kerala</option>
                                 </select>
                             </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                            <div class="form-check mt-4">
+                                <input type="checkbox" required class="form-check-input" id="exampleCheck1" />
                                 <label class="form-check-label" for="exampleCheck1">Confirm Submission</label>
                             </div>
                             <button type="submit" onClick={appendToLis} style={submit} class="btn btn-primary"><h5 style={{'margin':'0'}}>Submit</h5></button>
@@ -89,11 +92,12 @@ const Projects = () => {
                         </Modal.Body>
                     </Modal>
                     </div>
-    {pData
-      .filter((p) => p.location.toLowerCase().includes(searchValue.toLowerCase()))
-      .map((p) => (
-        <Project key={p.id} pId={p.id} pLocation={p.location} pStatus={p.status} />
-      ))}
+                    {pData
+  .filter((p) => p.location.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1)
+  .map((p) => (
+    <Project key={p.id} pId={p.id} pLocation={p.location} pStatus={p.status} />
+  ))}
+
   </div>
             </div>
         </div>
