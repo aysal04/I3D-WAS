@@ -42,6 +42,7 @@ const Projects = () => {
         });
         addLis([...Lis]);
         localStorage.setItem('pData', JSON.stringify(Lis));
+        
       };
       const [searchValue, setSearchValue] = useState('');
       const handleSearchChange = (value) => {
