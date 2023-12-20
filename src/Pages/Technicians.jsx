@@ -25,7 +25,7 @@ function Technicians() {
         <div className="justify-content-between align-items-center" style={{ paddingLeft: '30%', marginTop:'3%', minWidth:'80%' }}>
           <div>
             <div className='d-flex mb-5 mt-5 justify-content-between align-items-center'>
-              <h1 className='heading' style={{ marginRight: '10rem' }}>Field Technicians</h1>
+              <h1 className='heading'>Field Technicians</h1>
               <button onClick={() => setVisibility(true)}>Register</button>
             </div>
             <div>

@@ -8,6 +8,7 @@ import {
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import VpnKeyOutlinedIcon from '@mui/icons-material/VpnKeyOutlined';
 import LockOpenOutlinedIcon from '@mui/icons-material/LockOpenOutlined';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 function Signup() {
     const inputStyle={
@@ -40,6 +41,10 @@ function Signup() {
     <div className='d-flex justify-content-center'>
     <EmailOutlinedIcon style={{marginRight:'10px', marginTop:'8px'}}/>
     <MDBInput wrapperClass='mb-4' style={inputStyle} placeholder='Email address' required id='form1' type='email' />
+    </div>
+    <div className='d-flex justify-content-center'>
+        <AccountCircleIcon style={{marginRight:'10px', marginTop:'8px'}}/>
+        <MDBInput wrapperClass='mb-4' style={inputStyle} placeholder='Username' id='form2' required type='text' />
     </div>
     <div className='d-flex justify-content-center'>
         <VpnKeyOutlinedIcon style={{marginRight:'10px', marginTop:'8px'}}/>

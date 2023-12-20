@@ -38,7 +38,7 @@ function Signin() {
     <form action="/home">
     <div className='d-flex justify-content-center'>
     <EmailOutlinedIcon style={{marginRight:'10px', marginTop:'8px'}}/>
-    <MDBInput wrapperClass='mb-4' style={inputStyle} placeholder='Email address' id='form1' required type='email' />
+    <MDBInput wrapperClass='mb-4' style={inputStyle} placeholder='Username' id='form1' required type='text' />
     </div>
     <div className='d-flex justify-content-center'>
         <VpnKeyOutlinedIcon style={{marginRight:'10px', marginTop:'8px'}}/>

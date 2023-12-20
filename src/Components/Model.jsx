@@ -1,7 +1,5 @@
 import React, { useEffect, useLayoutEffect, useRef, Suspense } from 'react';
 import './Model.css';
-import * as THREE from 'three';
-import Face from './Object.jsx';
 import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import { Html, useProgress } from '@react-three/drei'
@@ -24,20 +22,26 @@ import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
 //     )
 // }
 function Item(props) {
-    const scene = useLoader(OBJLoader, "/ppxx.obj");
+    const scene = useLoader(OBJLoader, "/main_model.obj");
     return <primitive object={scene} {...props}/>
   }
 
 function Loader() {
     const { progress } = useProgress()
-    return <Html center>{progress} Loading...</Html>
+    return <Html center>Loading...</Html>
   }
 
 const Model = ({ projectId }) => {
+    const handleMetric = () => {
+        window.location.href = 'http://localhost:3001';
+    };
     return (
         <div className='modelCard'>
+            <div className='d-flex justify-content-between align-items-center'>
             <h3 className='mb-3'>{projectId}</h3>
             <h3>Model</h3>
+            <button onClick={handleMetric}>check metrics</button>
+            </div>
             <div id='model-main'>
             <Canvas 
             dpr={[1,2]} 
@@ -67,9 +71,9 @@ const Model = ({ projectId }) => {
             <br />
             <form>
             <div class="form-group">
-                                <label for="exampleInputPassword1"><h4>Select Model</h4></label>
+                                {/* <label for="exampleInputPassword1"><h4>Select Model</h4></label> */}
                                 <select class="form-control form-control-lg">
-                                    <option disabled selected>select model</option>
+                                    <option disabled selected>Select model</option>
                                     <option>First</option>
                                     <option>Second</option>
                                     <option>Third</option>

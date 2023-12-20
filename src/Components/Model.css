@@ -1,6 +1,7 @@
 .modelCard{
     padding-top: 2rem;
-    padding-left: 22rem;
+    padding-left: 30rem;
+    min-width:60rem;
 }
 
 .window{
